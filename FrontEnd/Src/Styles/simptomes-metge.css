@@ -1,10 +1,60 @@
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --background-color: #F4F6F7;
+    --text-color: #2C3E50;
+    --white: #FFFFFF;
+    --gray-light: #ECF0F1;
+    --gray-medium: #BDC3C7;
+}
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    background-color: white;
-    align-content: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+}
+
+.finestra {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.usuari-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.usuari-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.imgusuari {
+    width: 22px;
+    filter: brightness(0) invert(1);
+}
+
+.cap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+    color: var(--white);
 }
 
 .linia-div{
@@ -14,25 +64,7 @@ body {
     flex-basis: 100%;
 }
 
-.usuari-btn {
-    background-color: white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: none;
-    display: inline-block;
-}
 
-.imgusuari{
-    width:22px;
-}
-
-.cap {
-    display: flex;
-    justify-content: space-between; /* Pushes elements to the edges */
-    align-items: center; /* Aligns items vertically at the same level */
-    padding: 0 15px; /* Optional: Adds horizontal padding for spacing */
-}
 
 .simptomes{
     display:flex;
@@ -45,6 +77,7 @@ body {
     padding: 0 15px;
     font-weight: bold;
     font-size: xx-large;
+    margin-top: 10px;
 }
 
 .simptomes-comuns-titol{
@@ -61,8 +94,17 @@ body {
 }
 
 .btn-ofg{
-    border-radius: 5px;
-    width: 50%;
+    border: 2px solid var(--primary-color);
+    padding: 12px 20px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .simptomes-actuals{
@@ -78,16 +120,21 @@ body {
     border-radius: 5px;
 }
 
-.introduir-simptomes {
-    display: flex;
-    justify-content: center; /* Centers the button horizontally */
-    height: 100%;            /* Optional: Set a height for better alignment */
+.introduir-simptomes{
+    margin:10px;
 }
 
 .intro {
-    width: auto;
-    font-size: 20px;
-    border-radius: 5px;
-    height: 30px;
+    border: 2px solid var(--primary-color);
+    padding: 12px 20px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 

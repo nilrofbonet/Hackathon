@@ -1,3 +1,9 @@
+CREATE DATABASE IF NOT EXISTS patient_db;
+USE patient_db;
+
+-- Your table creation and stored procedures follow here
+
+
 -- Taula de pacients
 CREATE TABLE Pacients (
     id INT AUTO_INCREMENT PRIMARY KEY,
