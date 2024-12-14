@@ -1,7 +1,0 @@
-Dades Personals
-    - Nom Cognoms
-    - Data de naixament
-    - DNI + Seguretat Social
-    - vivenda
-    - telf personal + contacte emergència
-
