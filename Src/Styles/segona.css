@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+.usuari-btn {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    display: inline-block;
+}
+
+.imgusuari{
+    width:22px;
+}
+
+
+.cap {
+    display: flex;
+    justify-content: space-between; /* Pushes elements to the edges */
+    align-items: center; /* Aligns items vertically at the same level */
+    padding: 0 15px; /* Optional: Adds horizontal padding for spacing */
+}
+
+.btn-dades{
+    width: 50%;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.btn-emergencia{
+    width:50%;
+    color:red;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.buttons{
+    background-color: white;
+    flex-direction: column;
+    height:100%;
+    display:flex;
+    gap:10px;
+    align-items: center;
+    align-content: center;
+    
+}

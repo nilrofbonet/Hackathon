@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    align-items: center;
+    align-content: center;
+}
+
+.usuari-btn {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    display: inline-block;
+}
+
+.imgusuari{
+    width:22px;
+}
+
+.cap {
+    display: flex;
+    justify-content: space-between; /* Pushes elements to the edges */
+    align-items: center; /* Aligns items vertically at the same level */
+    padding: 0 15px; /* Optional: Adds horizontal padding for spacing */
+}
+
+.titol{
+    display:flex;
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.nom{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.informacio{
+    padding: 0 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin:10px;
+    height: 500px;
+}
+
+.malaltia{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.introduir-nom{
+    background-color: lightgray;
+    border-radius: 5px;
+    width: auto;
+}
+
+.cognom{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.introduir-cognom{
+    background-color: lightgray;
+    border-radius: 5px;
+    width: auto;
+}
+
+.naixament{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.introduir-naixament{
+    background-color: lightgray;
+    border-radius: 5px;
+    width: auto;
+}
+
+.metge-responsable{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.introduir-metge{
+    background-color: lightgray;
+    border-radius: 5px;
+    width: auto;
+}
+
+.hospital{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.introduir-hospital{
+    background-color: lightgray;
+    border-radius: 5px;
+    width: auto;
+}
+
+.nom-malaltia{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.introduir-malaltia{
+    background-color: lightgray;
+    border-radius: 5px;
+    width: auto;
+}
+
+.informacio-malaltia{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.introduir-info{
+    background-color: lightgray;
+    border-radius: 5px;
+    width: auto;
+}
