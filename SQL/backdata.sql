@@ -184,7 +184,6 @@ BEGIN
     INSERT INTO Historic (pacient_id, malaltia_id)
     VALUES (pacient_id_input, malaltia_id_input);
 END //
-    data_creacio TIMESTAMP DEFAULT CURRENT_TIME
 DELIMITER ;
 
 -- Funció per editar dades a la taula Pacients
