@@ -12,7 +12,7 @@ CREATE TABLE Pacients (
 );
 
 -- Taula de problemes aguts
-CREATE TABLE Problemes_Aguts (
+CREATE TABLE Malaltia (
     id INT AUTO_INCREMENT PRIMARY KEY,
     pacient_id INT NOT NULL,
     simptomes TEXT NOT NULL,
@@ -26,10 +26,10 @@ CREATE TABLE Problemes_Aguts (
 -- Taula de suggeriments terapèutics
 CREATE TABLE Suggeriments_Terapèutics (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    problema_id INT NOT NULL,
+    malaltia_id INT NOT NULL,
     accions_recomanades TEXT NOT NULL,
     accions_a_evitar TEXT,
-    FOREIGN KEY (problema_id) REFERENCES Problemes_Aguts(id)
+    FOREIGN KEY (malaltia_id) REFERENCES Malaltia(id)
 );
 
 -- Taula d'equips mèdics
@@ -44,8 +44,9 @@ CREATE TABLE Equips_Mèdics (
 CREATE TABLE Historic (
     id INT AUTO_INCREMENT PRIMARY KEY,
     pacient_id INT NOT NULL,
-    problema_id INT NOT NULL,
+    malaltia_id INT NOT NULL,
     data_registre TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (pacient_id) REFERENCES Pacients(id),
-    FOREIGN KEY (problema_id) REFERENCES Problemes_Aguts(id)
+    FOREIGN KEY (malaltia_id) REFERENCES Malaltia(id)
 );
+
