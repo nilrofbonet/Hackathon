@@ -10,7 +10,7 @@
     <div class="finestra">
         <div class="cap">
             <div class="text">
-                Antoni (63)  
+                {{ pacient.nom }} ({{ pacient.edat }})  
             </div>
             <div class="perfil">
                 <a href="usuari.html">
@@ -23,35 +23,34 @@
         <div class="linia-div"></div>
         <div class="titol">DADES PERSONALS</div>
 
-
         <div class="informacio">
             <div class="nom">
                 Nom:
                 <div class="introduir-nom">
-                    Antoni 
+                    {{ pacient.nom }}
                 </div>
             </div> 
             <div class="cognom">Cognoms:
                 <div class="introduir-cognom">
-                    Rof Suquet
+                    {{ pacient.nom.split(" ")[1] }}  <!-- Asume que el apellido está después del primer espacio -->
                 </div>
             </div>
             <div class="naixament">Data de naixament:
                 <div class="introduir-naixament">
-                    5/08/1961
+                    5/08/1961  <!-- Aquí puedes agregar la lógica para calcular la fecha de nacimiento si la tienes -->
                 </div>
             </div>
 
             <div class="sexe">Sexe:
                 <div class="introduir-sexe">
-                    Masculí
+                    {{ pacient.genere }}
                 </div>
             </div>
 
             <div class="telefons">
                 <div class="telefon-personal"> Telèfon personal:
                     <div class="introduir-telf-personal">
-                        XXXXXXXXX
+                        {{ pacient.telefon }}
                     </div>
                 </div>
 
@@ -63,26 +62,26 @@
             </div>
             <div class="metge-responsable">Metge responsable:
                 <div class="introduir-metge">
-                    Vanessa Suquet Sales
+                    {{ pacient.metge_responsable }}
                 </div>
             </div>
             <div class="hospital">Hospital de referència: 
                 <div class="introduir-hospital">
-                    Hospital Sant Joan de Déu
+                    {{ pacient.hospital }}
                 </div>
             </div>
             <div class="malaltia">
                 <div class="nom-malaltia">Diagnòstic:
                     <div class="introduir-malaltia">
-                        XXXX
+                        {{ pacient.diagnostics }}
                     </div>
                 </div>
                 <div class="medicaments">Medicaments actuals: 
-                    <div class="introduir-medicaments">XXXX</div>
+                    <div class="introduir-medicaments">{{ pacient.medicacio_actual }}</div>
                 </div>
                 <div class="informacio-malaltia">Informació malaltia:
                     <div class="introduir-info">
-                        lksakashfjdhfj,sd jvlknwej
+                        {{ pacient.limitacions }}
                     </div>
                 </div>
             </div>
