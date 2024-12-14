@@ -38,3 +38,9 @@ a{
     text-align: center;
     width: 150px;
 }
+
+.imatge-logo {
+    width: 150px;       /* Set the width of the image */
+    height: auto;       /* Maintain aspect ratio */
+    display: inline-block; /* Ensures proper alignment */
+}

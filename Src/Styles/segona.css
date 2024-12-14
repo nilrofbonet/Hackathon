@@ -27,29 +27,35 @@ body {
     padding: 0 15px; /* Optional: Adds horizontal padding for spacing */
 }
 
-.btn-dades{
-    width: auto;
-    border-radius: 5px;
-    height: 30px;
+.btn-dades {
+    font-size: xx-large; /* Keeps your desired font size */
+    width: auto;         /* Adjusts the width to fit the content */
+    height: auto;        /* Automatically adjusts height to fit content */
+    padding: 5px 10px;   /* Adds space around the text */
+    border-radius: 5px;  /* Keeps rounded corners */
+    box-sizing: border-box; /* Ensures padding is included in size calculations */
+    text-align: center;  /* Centers text horizontally */
 }
 
+
 .btn-emergencia{
-    width:auto;
-    color:red;
-    font-weight: bolder;
-    font-size: 20px;
-    border-radius: 5px;
-    height: 30px;
+    font-size: xx-large; /* Keeps your desired font size */
+    width: auto;  
+    color:red;       /* Adjusts the width to fit the content */
+    height: auto;        /* Automatically adjusts height to fit content */
+    padding: 5px 10px;   /* Adds space around the text */
+    border-radius: 5px;  /* Keeps rounded corners */
+    box-sizing: border-box; /* Ensures padding is included in size calculations */
+    text-align: center; 
 }
 
 .buttons{
+    display: flex;
     flex-direction: column;
-    height:100%;
-    display:flex;
-    gap:10px;
-    align-items: center;
-    align-items: center;
-    
+    gap: 10px;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100vh;          /* Ensure full viewport height */
 }
 
 .linia-div{
