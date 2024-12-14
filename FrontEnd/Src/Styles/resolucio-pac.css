@@ -1,73 +1,276 @@
+/* Complete styling for metge.css with additional emergency styling */
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --background-color: #F4F6F7;
+    --text-color: #2C3E50;
+    --white: #FFFFFF;
+    --gray-light: #ECF0F1;
+    --gray-medium: #BDC3C7;
+    --emergency-color: #E74C3C;
+}
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    background-color: white;
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    align-items: center;
+}
+
+.finestra {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .usuari-btn {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     width: 50px;
     height: 50px;
     border: none;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-.imgusuari{
-    width:22px;
+.usuari-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
+.imgusuari {
+    width: 22px;
+    filter: brightness(0) invert(1);
+}
 
 .cap {
     display: flex;
-    justify-content: space-between; /* Pushes elements to the edges */
-    align-items: center; /* Aligns items vertically at the same level */
-    padding: 0 15px; /* Optional: Adds horizontal padding for spacing */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+    color: var(--white);
 }
 
-
-.linia-div{
-    height: 1px;
-    background-color: black;
-    margin: 10px 0;
-    flex-basis: 100%;
+.titol {
+    font-weight: 600;
+    font-size: 2em;
+    padding: 15px 20px;
+    background-color: var(--gray-light);
+    color: var(--primary-color);
 }
 
-.resolve{
+.nom, .cognom, .naixament, .sexe, 
+.telefon-personal, .telefon-familiar, 
+.metge-responsable, .hospital, 
+.nom-malaltia, .informacio-malaltia, 
+.medicaments {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.introduir-nom, .introduir-cognom, 
+.introduir-naixament, .introduir-sexe, 
+.introduir-telf-personal, .introduir-telf-fam, 
+.introduir-metge, .introduir-hospital, 
+.introduir-malaltia, .introduir-info, 
+.introduir-medicaments {
+    background-color: var(--gray-light);
+    border-radius: 5px;
+    padding: 8px 12px;
+    flex-grow: 1;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.informacio, .historial {
     display: flex;
     flex-direction: column;
-    margin: 10px ;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--gray-light);
+    margin: 10px;
+    color: var(--primary-color);
 }
 
-.resolve-titol{
-    display:flex;
-    font-weight: bold;
-    font-size: x-large;
+.historial {
+    margin-top: 20px;
 }
 
-.resolve-cont{
-    background-color: lightgray;
-    margin-top: 10px;
+.titol-historial {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.informacio-historial {
+    padding: 10px;
+    background-color: var(--gray-light);
     border-radius: 5px;
-}
-
-.observacions{
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    margin: 10px ;
+    gap: 10px;
 }
 
-.obs-titol{
-    display:flex;
-    font-weight: bold;
-    font-size: x-large;
+.telefons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.obs-cont{
-    background-color: lightgray;
+.telefon-personal, .telefon-familiar {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.malaltia {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nom-malaltia, .informacio-malaltia {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.introduir-malaltia, .introduir-info {
+    background-color: var(--gray-light);
+    border-radius: 5px;
+    padding: 8px 12px;
+    color: var(--primary-color);
+}
+
+.simptomes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.simptomes-titol {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.simptomes-comuns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.simptomes-comuns-titol {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--secondary-color);
+}
+
+.btn-ofg {
+    border-radius: 8px;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-ofg:hover {
+    background-color: #2D82C7;
+    transform: translateY(-2px);
+}
+
+.simptomes-actuals {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+.actuals-cont {
+    background-color: var(--gray-light);
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 15px;
+    color: var(--primary-color);
+}
+
+.introduir-simptomes {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.intro {
+    width: 100%;
+    max-width: 250px;
+    font-size: 1em;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: var(--emergency-color);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.intro:hover {
+    background-color: #C0392B;
+    transform: translateY(-2px);
+}
+.resolve-cont {
+    background-color: var(--gray-light);
     margin-top: 10px;
     border-radius: 5px;
+    padding: 10px;
+    color: var(--primary-color);
 }
 
+.resolve {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.resolve-titol {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.observacions {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.obs-titol {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.obs-cont {
+    background-color: var(--gray-light);
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--primary-color);
+}

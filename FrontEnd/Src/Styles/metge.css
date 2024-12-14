@@ -1,220 +1,158 @@
+/* Complete styling for metge.css */
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --background-color: #F4F6F7;
+    --text-color: #2C3E50;
+    --white: #FFFFFF;
+    --gray-light: #ECF0F1;
+    --gray-medium: #BDC3C7;
+}
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    background-color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: center;
-    align-content: center;
 }
 
-.linia-div{
-    height: 1px;
-    background-color: black;
-    margin: 10px 10px;
-    flex-basis: 100%;
+.finestra {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .usuari-btn {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     width: 50px;
     height: 50px;
     border: none;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-.imgusuari{
-    width:22px;
+.usuari-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.imgusuari {
+    width: 22px;
+    filter: brightness(0) invert(1);
 }
 
 .cap {
     display: flex;
-    justify-content: space-between; /* Pushes elements to the edges */
-    align-items: center; /* Aligns items vertically at the same level */
-    padding: 0 15px; /* Optional: Adds horizontal padding for spacing */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+    color: var(--white);
 }
 
-.titol{
-    display:flex;
-    padding: 0 15px;
-    font-weight: bold;
-    font-size: xx-large;
-}
 
-.nom{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.informacio{
-    padding: 0 15px;
-    margin-top: 30px;
+.titol {
+    font-weight: 600;
+    font-size: 2em;
+    padding: 15px 20px;
+    background-color: var(--gray-light);
+    color: var(--primary-color);
+    margin: 10px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    margin:10px;
-    height: auto;
-    margin-bottom: 10px;
 }
 
-.historial{
+.nom, .cognom, .naixament, .sexe, 
+.telefon-personal, .telefon-familiar, 
+.metge-responsable, .hospital, 
+.nom-malaltia, .informacio-malaltia, 
+.medicaments {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.introduir-nom, .introduir-cognom, 
+.introduir-naixament, .introduir-sexe, 
+.introduir-telf-personal, .introduir-telf-fam, 
+.introduir-metge, .introduir-hospital, 
+.introduir-malaltia, .introduir-info, 
+.introduir-medicaments {
+    background-color: var(--gray-light);
+    border-radius: 5px;
+    padding: 8px 12px;
+    flex-grow: 1;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.informacio, .historial {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--gray-light);
+    margin: 10px;
+    color: var(--primary-color);
+}
+
+.historial {
     margin-top: 20px;
+}
+
+.titol-historial {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.informacio-historial {
+    padding: 10px;
+    background-color: var(--gray-light);
+    border-radius: 5px;
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
 }
 
-.titol-historial{
-    display:flex;
-    padding: 0 15px;
-    font-weight: bold;
-    font-size: x-large;
-}
-
-.informacio-historial{
-    display:flex;
-    padding: 0 15px;
-}
-
-.malaltia{
+.telefons {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
 }
 
-.introduir-nom{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-.cognom{
+.telefon-personal, .telefon-familiar {
     margin-top: 10px;
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
-.introduir-cognom{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-.naixament{
-    margin-top: 10px;
+.malaltia {
     display: flex;
-    gap: 10px;
-}
-
-.introduir-naixament{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-.metge-responsable{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.introduir-metge{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-.hospital{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.introduir-hospital{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-.nom-malaltia{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.introduir-malaltia{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-.informacio-malaltia{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.introduir-info{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-.sexe{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.introduir-sexe{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-.telefons{
-    display: flex;
-    gap: 10px;
     flex-direction: column;
+    gap: 15px;
 }
 
-.telefon-personal{
-    margin-top: 10px;
+.nom-malaltia, .informacio-malaltia {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
-.introduir-telf-personal{
-    background-color: lightgray;
+.introduir-malaltia, .introduir-info {
+    background-color: var(--gray-light);
     border-radius: 5px;
-    width: auto;
-}
-
-
-.telefon-familiar{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.introduir-telf-fam{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
-}
-
-
-.medicaments{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.introduir-medicaments{
-    background-color: lightgray;
-    border-radius: 5px;
-    width: auto;
+    padding: 8px 12px;
+    color: var(--primary-color);
 }

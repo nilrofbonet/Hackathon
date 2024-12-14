@@ -1,91 +1,107 @@
+/* Styled resolucio.css */
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --background-color: #F4F6F7;
+    --text-color: #2C3E50;
+    --white: #FFFFFF;
+    --gray-light: #ECF0F1;
+    --gray-medium: #BDC3C7;
+}
+
+.finestra {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    background-color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
 }
 
 .usuari-btn {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     width: 50px;
     height: 50px;
     border: none;
     display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-.imgusuari{
-    width:22px;
+.usuari-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
+.imgusuari {
+    width: 22px;
+    filter: brightness(0) invert(1);
+}
 
 .cap {
     display: flex;
-    justify-content: space-between; /* Pushes elements to the edges */
-    align-items: center; /* Aligns items vertically at the same level */
-    padding: 0 15px; /* Optional: Adds horizontal padding for spacing */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+    color: var(--white);
 }
 
-
-.linia-div{
+.linia-div {
     height: 1px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.1);
     margin: 10px 0;
-    flex-basis: 100%;
 }
 
-.resolve{
+.resolve {
     display: flex;
     flex-direction: column;
-    margin: 10px ;
+    margin: 10px;
 }
 
-.resolve-titol{
-    display:flex;
-    font-weight: bold;
-    font-size: x-large;
+.resolve-titol {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--primary-color);
+    padding-bottom: 5px;
 }
 
-.resolve-cont{
-    background-color: lightgray;
+.resolve-cont {
+    background-color: var(--gray-light);
     margin-top: 10px;
     border-radius: 5px;
+    padding: 10px;
+    color: var(--primary-color);
 }
 
-.medicaments-prohibits{
+.medicaments-prohibits, .observacions {
     display: flex;
     flex-direction: column;
-    margin: 10px ;
+    margin: 10px;
 }
 
-.prohibits-meds{
-    display:flex;
-    font-weight: bold;
-    font-size: x-large;
+.prohibits-meds, .obs-titol {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--primary-color);
+    padding-bottom: 5px;
 }
 
-.proh-cont{
-    background-color: lightgray;
+.proh-cont, .obs-cont {
+    background-color: var(--gray-light);
     margin-top: 10px;
     border-radius: 5px;
+    padding: 10px;
+    color: var(--primary-color);
 }
-
-.observacions{
-    display: flex;
-    flex-direction: column;
-    margin: 10px ;
-}
-
-.obs-titol{
-    display:flex;
-    font-weight: bold;
-    font-size: x-large;
-}
-
-.obs-cont{
-    background-color: lightgray;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
