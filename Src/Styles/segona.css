@@ -28,13 +28,13 @@ body {
 }
 
 .btn-dades{
-    width: 50%;
+    width: auto;
     border-radius: 5px;
     height: 30px;
 }
 
 .btn-emergencia{
-    width:50%;
+    width:auto;
     color:red;
     font-weight: bolder;
     font-size: 20px;
@@ -43,12 +43,18 @@ body {
 }
 
 .buttons{
-    background-color: white;
     flex-direction: column;
     height:100%;
     display:flex;
     gap:10px;
     align-items: center;
-    align-content: center;
+    align-items: center;
     
+}
+
+.linia-div{
+    height: 1px;
+    background-color: black;
+    margin: 10px 0;
+    flex-basis: 100%;
 }
