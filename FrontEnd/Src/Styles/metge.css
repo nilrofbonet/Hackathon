@@ -1,158 +1,72 @@
-/* Complete styling for metge.css */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QResp</title>
+    <link rel="stylesheet" href="/FrontEnd/Src/Styles/usuari.css">
+</head>
+<body>
+    <div class="finestra">
+        <div class="cap">
+            <div class="text">
+                Antoni Pérez (63)
+            </div>
+            <div class="perfil">
+                <button class="usuari-btn">
+                    <img src="/FrontEnd/img/login.png" alt="usuari" class="imgusuari">
+                </button>
+            </div>
+        </div>
+        
+        <!-- DADES PERSONALS -->
+        <div class="titol">DADES PERSONALS</div>
+        <div class="informacio">
+            <div class="nom">Nom:<div class="introduir-nom">Antoni Pérez</div></div>
+            <div class="cognom">Cognoms:<div class="introduir-cognom">Pérez</div></div>
+            <div class="naixament">Data de naixement:<div class="introduir-naixament">5/08/1961</div></div>
+            <div class="sexe">Sexe:<div class="introduir-sexe">Masculí</div></div>
+            <div class="telefon-personal">Telèfon personal:<div class="introduir-telf-personal">612345678</div></div>
+            <div class="telefon-familiar">Telèfon d'un familiar:<div class="introduir-telf-fam">612345679</div></div>
+        </div>
 
-:root {
-    --primary-color: #2C3E50;
-    --secondary-color: #3498DB;
-    --background-color: #F4F6F7;
-    --text-color: #2C3E50;
-    --white: #FFFFFF;
-    --gray-light: #ECF0F1;
-    --gray-medium: #BDC3C7;
-}
+        <!-- MALALTIA, SÍMPTOMES I SUGGERIMENTS -->
+        <div class="titol">MALALTIA, SÍMPTOMES I SUGGERIMENTS</div>
+        <div class="informacio">
+            <div class="nom-malaltia">Diagnòstic:<div class="introduir-malaltia">Insuficiència respiratòria crònica</div></div>
+            <div class="simptomes">Símptomes:<div class="introduir-simptomes">Fatiga, tos crònica</div></div>
+            <div class="medicaments">Medicaments:<div class="introduir-medicaments">Salbutamol, Tiotropi</div></div>
+            <div class="suggeriments">Suggeriments:<div class="introduir-suggeriments">Evitar esforços físics</div></div>
+        </div>
 
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    align-items: center;
-}
+       <!-- EQUIP MÈDIC -->
+<div class="titol">EQUIP MÈDIC</div>
+<div class="informacio">
+    <div class="metge-responsable">
+        Metge Responsable:<div class="introduir-metge">Dr. Jordi Casas</div>
+    </div>
+    <div class="hospital">
+        Hospital:<div class="introduir-hospital">Hospital Clínic</div>
+    </div>
+    <div class="contacte-equip">
+        Contacte:<div class="introduir-hospital">93 123 45 67</div>
+    </div>
+</div>
 
-.finestra {
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: var(--white);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
+        <!-- HISTÒRIC -->
+        <div class="titol">HISTÒRIC</div>
+        <div class="informacio">
+            <div class="historic">Última visita:<div class="introduir-historic">01/12/2023</div></div>
+            <div class="historic">Proves realitzades:<div class="introduir-historic">Radiografia, Espirometria</div></div>
+        </div>
+    </div>
+</body>
+</html>
 
-.usuari-btn {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
+<!-- Afegeix el botó Confirmar al final -->
+<div class="boto-confirmar">
+    <a href="segona.html">
+        <button class="btn-confirmar">Confirmar</button>
+    </a>
+</div>
 
-.usuari-btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.imgusuari {
-    width: 22px;
-    filter: brightness(0) invert(1);
-}
-
-.cap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: var(--secondary-color);
-    color: var(--white);
-}
-
-
-.titol {
-    font-weight: 600;
-    font-size: 2em;
-    padding: 15px 20px;
-    background-color: var(--gray-light);
-    color: var(--primary-color);
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.nom, .cognom, .naixament, .sexe, 
-.telefon-personal, .telefon-familiar, 
-.metge-responsable, .hospital, 
-.nom-malaltia, .informacio-malaltia, 
-.medicaments {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.introduir-nom, .introduir-cognom, 
-.introduir-naixament, .introduir-sexe, 
-.introduir-telf-personal, .introduir-telf-fam, 
-.introduir-metge, .introduir-hospital, 
-.introduir-malaltia, .introduir-info, 
-.introduir-medicaments {
-    background-color: var(--gray-light);
-    border-radius: 5px;
-    padding: 8px 12px;
-    flex-grow: 1;
-    color: var(--primary-color);
-    font-weight: 400;
-}
-
-.informacio, .historial {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--gray-light);
-    margin: 10px;
-    color: var(--primary-color);
-}
-
-.historial {
-    margin-top: 20px;
-}
-
-.titol-historial {
-    font-weight: 600;
-    font-size: 1.5em;
-    color: var(--primary-color);
-}
-
-.informacio-historial {
-    padding: 10px;
-    background-color: var(--gray-light);
-    border-radius: 5px;
-    color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.telefons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.telefon-personal, .telefon-familiar {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.malaltia {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.nom-malaltia, .informacio-malaltia {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.introduir-malaltia, .introduir-info {
-    background-color: var(--gray-light);
-    border-radius: 5px;
-    padding: 8px 12px;
-    color: var(--primary-color);
-}
