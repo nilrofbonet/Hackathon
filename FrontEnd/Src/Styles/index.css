@@ -1,115 +1,115 @@
-:root {
-    --primary-color: #2C3E50;  /* Color negre per al text */
-    --secondary-color: #3498DB; /* Blau per accents i botons */
-    --background-color: #FFFFFF; /* Canviem el color de fons a blanc */
-    --text-color: #2C3E50;  /* Negre per al text principal */
-    --white: #FFFFFF;  /* Blanc */
-    --border-radius: 12px;  /* Arrodoniment de cantonades */
-    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombratge subtil */
-}
+    :root {
+        --primary-color: #2C3E50;  /* Color negre per al text */
+        --secondary-color: #3498DB; /* Blau per accents i botons */
+        --background-color: #FFFFFF; /* Canviem el color de fons a blanc */
+        --text-color: #2C3E50;  /* Negre per al text principal */
+        --white: #FFFFFF;  /* Blanc */
+        --border-radius: 12px;  /* Arrodoniment de cantonades */
+        --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombratge subtil */
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: var(--background-color); /* Fons blanc */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-color);
-    line-height: 1.6;
-    overflow: hidden;
-}
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: var(--background-color); /* Fons blanc */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+        overflow: hidden;
+    }
 
-/* Contenidor general amb espai addicional i estil de màrqueting */
-.contenidor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    width: 350px;
-}
+    /* Contenidor general amb espai addicional i estil de màrqueting */
+    .contenidor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        width: 350px;
+    }
 
-.titol {
-    margin-bottom: 20px;
-}
+    .titol {
+        margin-bottom: 20px;
+    }
 
-.imatge-logo {
-    width: 180px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
+    .imatge-logo {
+        width: 180px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
 
-.imatge-logo:hover {
-    transform: scale(1.1);
-}
+    .imatge-logo:hover {
+        transform: scale(1.1);
+    }
 
-.nom-pacient {
-    font-weight: 700;
-    font-size: 1.8em;
-    color: var(--primary-color); /* Negre per al nom */
-    margin-bottom: 20px;
-}
+    .nom-pacient {
+        font-weight: 700;
+        font-size: 1.8em;
+        color: var(--primary-color); /* Negre per al nom */
+        margin-bottom: 20px;
+    }
 
-.opcions {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    align-items: center; /* Centrat dels botons */
-}
+    .opcions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center; /* Centrat dels botons */
+    }
 
-a {
-    text-decoration: none;
-    width: 250px; /* Reduïm l'amplada dels botons */
-}
+    a {
+        text-decoration: none;
+        width: 250px; /* Reduïm l'amplada dels botons */
+    }
 
-.btn {
-    border: 2px solid var(--secondary-color);
-    padding: 12px 20px;
-    background-color: var(--white);
-    color: var(--secondary-color);
-    cursor: pointer;
-    text-align: center;
-    width: 100%; /* L'amplada del botó serà del 100% dins del contenidor */
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
-    transform: scale(1);
-}
+    .btn {
+        border: 2px solid var(--secondary-color);
+        padding: 12px 20px;
+        background-color: var(--white);
+        color: var(--secondary-color);
+        cursor: pointer;
+        text-align: center;
+        width: 100%; /* L'amplada del botó serà del 100% dins del contenidor */
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 5px;
+        transform: scale(1);
+    }
 
-.btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+    .btn:hover {
+        background-color: var(--secondary-color);
+        color: var(--white);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
 
-/* Botó "Confirmar" */
-.btn-confirmar {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    font-weight: 700;
-    margin-top: 30px;
-    width: 150px;
-    transition: all 0.3s ease;
-}
+    /* Botó "Confirmar" */
+    .btn-confirmar {
+        background-color: var(--secondary-color);
+        color: var(--white);
+        font-weight: 700;
+        margin-top: 30px;
+        width: 150px;
+        transition: all 0.3s ease;
+    }
 
-.btn-confirmar:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
+    .btn-confirmar:hover {
+        background-color: #2980b9;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
 
