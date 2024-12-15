@@ -9,7 +9,8 @@
 
 body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
     background-color: var(--background-color);
@@ -18,12 +19,15 @@ body {
 }
 
 .finestra {
-    max-width: 500px;
     width: 100%;
+    height: 100%;
+    max-width: 500px;
     margin: 0 auto;
     background-color: var(--white);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .cap {
@@ -73,9 +77,10 @@ body {
     justify-content: center;
     align-items: center;
     padding: 30px 20px;
+    flex-grow: 1;
 }
 
-.btn-dades, .btn-emergencia {
+.btn-dades, .btn-emergencia, .btn-retornar {
     font-size: 1.1em;
     width: 250px;
     height: auto;
@@ -109,6 +114,23 @@ body {
 
 .btn-emergencia:hover {
     background-color: darken(var(--emergency-color), 10%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-retornar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+    margin-top: 20px;
+    padding: 8px 15px; /* Mantenim la mida més petita, però estil similar als altres botons */
+    font-size: 1.1em; /* Mateixa mida de font que els altres botons */
+    width: 200px; /* Mida ajustada */
+    align-self: flex-start;  /* Col·locat a l'esquerra */
+}
+
+.btn-retornar:hover {
+    background-color: darken(var(--primary-color), 10%);
     transform: translateY(-3px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
