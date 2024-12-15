@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #2C3E50;
     --secondary-color: #3498DB;
@@ -7,6 +6,7 @@
     --white: #FFFFFF;
     --gray-light: #ECF0F1;
     --gray-medium: #BDC3C7;
+    --selected-color: #27AE60; /* Verd per quan es selecciona */
 }
 
 body {
@@ -57,45 +57,36 @@ body {
     color: var(--white);
 }
 
-.linia-div{
-    height: 1px;
-    background-color: black;
-    margin: 10px 0;
-    flex-basis: 100%;
-}
-
-
-
-.simptomes{
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-}
-
-.simptomes-titol{
-    display:flex;
-    padding: 0 15px;
-    font-weight: bold;
-    font-size: xx-large;
-    margin-top: 10px;
-}
-
-.simptomes-comuns-titol{
-    display:flex;
-    font-weight: bold;
-    font-size: x-large;  
-}
-
-.simptomes-comuns{
+.simptomes {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 10px;
+    gap: 15px; /* Reduït espai entre elements */
+    padding: 15px; /* Reduït espai intern */
 }
 
-.btn-ofg{
+.simptomes-titol {
+    font-weight: bold;
+    font-size: large; /* Mida més petita per al títol */
+    margin-top: 8px;
+}
+
+/* Matriu de botons ajustada a 3-3-1 */
+.matriu-boto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 8px; /* Espai entre botons més reduït */
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.matriu-boto button:nth-child(n+7) {
+    grid-column: span 2; /* Les dues últimes cel·les tenen 2 columnes */
+}
+
+.btn-simptoma {
     border: 2px solid var(--primary-color);
-    padding: 12px 20px;
+    padding: 10px 16px; /* Mida més petita */
     background-color: var(--white);
     color: var(--primary-color);
     cursor: pointer;
@@ -105,28 +96,29 @@ body {
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-.simptomes-actuals{
-    display:flex;
-    padding: 0 15px;
-    font-weight: bold;
-    font-size: x-large;  
+.btn-simptoma.selected {
+    background-color: var(--selected-color);
+    color: var(--white);
+    border-color: var(--selected-color);
 }
 
-.actuals-cont{
-    background-color: lightgray;
-    margin: 10px;
-    border-radius: 5px;
+.btn-simptoma:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
-.introduir-simptomes{
-    margin:10px;
+.introduir-simptomes {
+    margin: 8px; /* Reduït espai entre botons */
 }
 
 .intro {
     border: 2px solid var(--primary-color);
-    padding: 12px 20px;
+    padding: 10px 16px; /* Mida més petita */
     background-color: var(--white);
     color: var(--primary-color);
     cursor: pointer;
@@ -138,3 +130,49 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.retornar-btn {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+}
+
+.btn-retornar {
+    border: 2px solid var(--primary-color);
+    padding: 8px 12px; /* Mida més petita */
+    background-color: var(--white);
+    color: var(--primary-color);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-retornar:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estils per al títol "Observacions" */
+.observacions-titol {
+    font-weight: bold;
+    font-size: large; /* Mida més petita per al títol */
+    margin-top: 12px;
+    padding: 8px 12px;
+}
+
+/* Estils per al quadre de text per les observacions */
+.observacions-caixa {
+    width: 100%;
+    height: 120px; /* Reduït la mida del quadre */
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px; /* Mida més petita */
+    resize: vertical;
+    box-sizing: border-box;
+}
