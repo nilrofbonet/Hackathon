@@ -17,6 +17,19 @@ body {
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
+    overflow-y: auto; /* Barra scroll */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Assegura l'altura completa */
+    margin: 0;
+    background-color: var(--background-color);
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    overflow-y: auto; /* Permet scroll si cal */
 }
 
 .finestra {
@@ -24,8 +37,11 @@ body {
     max-width: 500px;
     background-color: var(--white);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow-y: auto; /* Scroll si el contingut ho requereix */
+    max-height: 90vh; /* Limita l'alçada màxima a 90% de la pantalla */
+    border-radius: 10px;
 }
+
 
 .cap {
     display: flex;
@@ -55,12 +71,6 @@ body {
     filter: brightness(0) invert(1);
 }
 
-.linia-div {
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
-    margin: 0;
-}
-
 .titol {
     font-weight: 600;
     font-size: 1.5em;
@@ -80,7 +90,8 @@ body {
 .telefon-personal, .telefon-familiar, 
 .metge-responsable, .hospital, 
 .nom-malaltia, .medicaments, 
-.informacio-malaltia {
+.informacio-malaltia, .simptomes, 
+.suggeriments, .historic {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -92,7 +103,8 @@ body {
 .introduir-telf-personal, .introduir-telf-fam,
 .introduir-metge, .introduir-hospital, 
 .introduir-malaltia, .introduir-medicaments, 
-.introduir-info {
+.introduir-info, .introduir-simptomes, 
+.introduir-suggeriments, .introduir-historic {
     background-color: var(--gray-light);
     border-radius: 5px;
     padding: 8px 12px;
@@ -101,14 +113,43 @@ body {
     font-weight: 400;
 }
 
-.telefons {
+.contacte-equip {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
 }
 
-.malaltia {
+.introduir-contacte-equip {
+    background-color: var(--gray-light);
+    border-radius: 5px;
+    padding: 8px 12px;
+    flex-grow: 1;
+    color: var(--primary-color);
+    font-weight: 400
+    
+    ;
+}
+
+/* Botó Confirmar */
+.boto-confirmar {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    justify-content: center;
+    margin: 20px 0; /* Espai per separar el botó del contingut */
+}
+
+.btn-confirmar {
+    background-color: var(--secondary-color); /* Color principal */
+    color: var(--white); /* Text blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirmar:hover {
+    background-color: var(--primary-color); /* Canvia de color en passar el cursor */
 }
