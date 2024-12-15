@@ -23,15 +23,23 @@
 
         <div class="simptomes"> 
             <div class="simptomes-titol">SÍMPTOMES</div> 
-            <div class="simptomes-comuns"> 
-                <div class="simptomes-comuns-titol">Símptomes de la malaltia</div>
-                <div class="intro-simpt-comuns">
-                    <button class="btn-ofg">M'ofego</button>
-                </div>
+
+            <!-- Matriu de botons ajustada a 3-3-1 (eliminant "Proves Inicials") -->
+            <div class="matriu-boto">
+                <button class="btn-simptoma" data-simptoma="RX Tòrax: Infiltrats o sospita Pneumònia">RX Tòrax</button>
+                <button class="btn-simptoma" data-simptoma="Diagnòstic Concret d'Agudització">Agudització</button>
+                <button class="btn-simptoma" data-simptoma="Pneumònia: Diagnòstic Confirmat">Pneumònia Confirmada</button>
+
+                <button class="btn-simptoma" data-simptoma="No Diagnòstic Concret">Sense Diagnòstic</button>
+                <button class="btn-simptoma" data-simptoma="Antibiòtic per Immunodeprimits">Antibiòtic: Immunodeprimit</button>
+                <button class="btn-simptoma" data-simptoma="Heparina (HBPM)">Heparina (HBPM)</button> <!-- Afegit Heparina a la matriu -->
             </div>
 
-            <div class="simptomes-actuals">Símptomes actuals</div>
-            <div class="actuals-cont">jsjsjs</div>
+            <!-- Títol Observacions -->
+            <div class="observacions-titol">Observacions</div>
+
+            <!-- Quadre de text per escriure les observacions -->
+            <textarea class="observacions-caixa" placeholder="Introdueix les teves observacions aquí..."></textarea>
         </div>
 
         <div class="introduir-simptomes">
@@ -40,6 +48,21 @@
             </a>
         </div>
 
+        <!-- Botó de retornar cap a la pàgina anterior -->
+        <div class="retornar-btn">
+            <a href="segona.html">
+                <button class="btn-retornar">Retornar</button>
+            </a>
+        </div>
     </div>
+
+    <script>
+        // Script per a la selecció dels botons
+        document.querySelectorAll('.btn-simptoma').forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('selected');
+            });
+        });
+    </script>
 </body>
 </html>
