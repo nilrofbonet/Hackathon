@@ -1,5 +1,6 @@
-/* Complete styling for metge.css with additional emergency styling */
+/* Styled resolucio-pac.css */
 
+/* Definició de colors i tipografies */
 :root {
     --primary-color: #2C3E50;
     --secondary-color: #3498DB;
@@ -8,7 +9,6 @@
     --white: #FFFFFF;
     --gray-light: #ECF0F1;
     --gray-medium: #BDC3C7;
-    --emergency-color: #E74C3C;
 }
 
 body {
@@ -17,18 +17,20 @@ body {
     height: 100vh;
     margin: 0;
     background-color: var(--background-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: center;
 }
 
 .finestra {
-    max-width: 500px;
     width: 100%;
+    max-width: 600px; /* Limitem l'amplada per tenir un disseny més net */
     margin: 0 auto;
     background-color: var(--white);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .usuari-btn {
@@ -59,210 +61,37 @@ body {
     color: var(--white);
 }
 
-.titol {
-    font-weight: 600;
-    font-size: 2em;
-    padding: 15px 20px;
-    background-color: var(--gray-light);
-    color: var(--primary-color);
-}
-
-.nom, .cognom, .naixament, .sexe, 
-.telefon-personal, .telefon-familiar, 
-.metge-responsable, .hospital, 
-.nom-malaltia, .informacio-malaltia, 
-.medicaments {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.introduir-nom, .introduir-cognom, 
-.introduir-naixament, .introduir-sexe, 
-.introduir-telf-personal, .introduir-telf-fam, 
-.introduir-metge, .introduir-hospital, 
-.introduir-malaltia, .introduir-info, 
-.introduir-medicaments {
-    background-color: var(--gray-light);
-    border-radius: 5px;
-    padding: 8px 12px;
-    flex-grow: 1;
-    color: var(--primary-color);
-    font-weight: 400;
-}
-
-.informacio, .historial {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--gray-light);
-    margin: 10px;
-    color: var(--primary-color);
-}
-
-.historial {
-    margin-top: 20px;
-}
-
-.titol-historial {
-    font-weight: 600;
-    font-size: 1.5em;
-    color: var(--primary-color);
-}
-
-.informacio-historial {
-    padding: 10px;
-    background-color: var(--gray-light);
-    border-radius: 5px;
-    color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.telefons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.telefon-personal, .telefon-familiar {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.malaltia {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.nom-malaltia, .informacio-malaltia {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.introduir-malaltia, .introduir-info {
-    background-color: var(--gray-light);
-    border-radius: 5px;
-    padding: 8px 12px;
-    color: var(--primary-color);
-}
-
-.simptomes {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.simptomes-titol {
-    font-weight: 600;
-    font-size: 1.5em;
-    color: var(--primary-color);
-}
-
-.simptomes-comuns {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.simptomes-comuns-titol {
-    font-weight: 600;
-    font-size: 1.2em;
-    color: var(--secondary-color);
-}
-
-.btn-ofg {
-    border-radius: 8px;
-    width: 100%;
-    padding: 12px 20px;
-    background-color: var(--secondary-color);
-    color: var(--white);
-    border: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-ofg:hover {
-    background-color: #2D82C7;
-    transform: translateY(-2px);
-}
-
-.simptomes-actuals {
-    font-weight: 600;
-    font-size: 1.2em;
-    color: var(--primary-color);
-}
-
-.actuals-cont {
-    background-color: var(--gray-light);
-    margin-top: 10px;
-    border-radius: 8px;
-    padding: 15px;
-    color: var(--primary-color);
-}
-
-.introduir-simptomes {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.intro {
-    width: 100%;
-    max-width: 250px;
-    font-size: 1em;
-    padding: 12px 20px;
-    border-radius: 8px;
-    background-color: var(--emergency-color);
-    color: var(--white);
-    border: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.intro:hover {
-    background-color: #C0392B;
-    transform: translateY(-2px);
-}
-.resolve-cont {
-    background-color: var(--gray-light);
-    margin-top: 10px;
-    border-radius: 5px;
-    padding: 10px;
-    color: var(--primary-color);
-}
-
 .resolve {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 15px 0;
 }
 
 .resolve-titol {
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: var(--primary-color);
     padding-bottom: 5px;
+}
+
+.resolve-cont {
+    background-color: var(--gray-light);
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 12px;
+    color: var(--primary-color);
+    font-size: 1em;
 }
 
 .observacions {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 15px 0;
 }
 
 .obs-titol {
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: var(--primary-color);
     padding-bottom: 5px;
 }
@@ -271,6 +100,34 @@ body {
     background-color: var(--gray-light);
     margin-top: 10px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 12px;
     color: var(--primary-color);
+    font-size: 1em;
+}
+
+/* Estil per al botó "Confirmar" */
+.confirmar-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-confirmar {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-size: 1.1em;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-confirmar:hover {
+    background-color: #2980B9;
+    transform: scale(1.05); /* Efecte de creixement lleuger al passar el cursor */
+}
+
+.btn-confirmar:active {
+    background-color: #1A6FA0;
 }
