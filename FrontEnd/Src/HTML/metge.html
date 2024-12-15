@@ -4,99 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QResp</title>
-    <link rel="stylesheet" href="/FrontEnd/Src/Styles/metge.css">
+    <link rel="stylesheet" href="/FrontEnd/Src/Styles/usuari.css">
 </head>
 <body>
     <div class="finestra">
         <div class="cap">
             <div class="text">
-                Antoni (63)  
+                Antoni Pérez (63)
             </div>
             <div class="perfil">
-                <a href="metge.html">
-                    <button class="usuari-btn">
-                        <img src="/FrontEnd/img/login.png" alt="usuari" class="imgusuari">
-                    </button>
-                </a>
+                <button class="usuari-btn">
+                    <img src="/FrontEnd/img/login.png" alt="usuari" class="imgusuari">
+                </button>
             </div>
         </div>
+        
+        <!-- DADES PERSONALS -->
         <div class="titol">DADES PERSONALS</div>
-
         <div class="informacio">
-            <div class="nom">
-                Nom:
-                <div class="introduir-nom">
-                    Antoni 
-                </div>
-            </div> 
-            <div class="cognom">Cognoms:
-                <div class="introduir-cognom">
-                    Rof Suquet
-                </div>
-            </div>
-            <div class="naixament">Data de naixament:
-                <div class="introduir-naixament">
-                    5/08/1961
-                </div>
-            </div>
-
-            <div class="sexe">Sexe:
-                <div class="introduir-sexe">
-                    Masculí
-                </div>
-            </div>
-
-            <div class="telefons">
-                <div class="telefon-personal"> Telèfon personal:
-                    <div class="introduir-telf-personal">
-                        XXXXXXXXX
-                    </div>
-                </div>
-
-                <div class="telefon-familiar">Telèfon d'un familiar:
-                    <div class="introduir-telf-fam">
-                        XXXXXXXXX
-                    </div>
-                </div>
-            </div>
-            <div class="metge-responsable">Metge responsable:
-                <div class="introduir-metge">
-                    Vanessa Suquet Sales
-                </div>
-            </div>
-            <div class="hospital">Hospital de referència: 
-                <div class="introduir-hospital">
-                    Hospital Sant Joan de Déu
-                </div>
-            </div>
-            <div class="malaltia">
-                <div class="nom-malaltia">Diagnòstic:
-                    <div class="introduir-malaltia">
-                        XXXX
-                    </div>
-                </div>
-                <div class="medicaments">Medicaments actuals: 
-                    <div class="introduir-medicaments">XXXX</div>
-                </div>
-                <div class="informacio-malaltia">Informació malaltia:
-                    <div class="introduir-info">
-                        lksakashfjdhfj,sd jvlknwej
-                    </div>
-                </div>
-            </div>
+            <div class="nom">Nom:<div class="introduir-nom">Antoni Pérez</div></div>
+            <div class="cognom">Cognoms:<div class="introduir-cognom">Pérez</div></div>
+            <div class="naixament">Data de naixement:<div class="introduir-naixament">5/08/1961</div></div>
+            <div class="sexe">Sexe:<div class="introduir-sexe">Masculí</div></div>
+            <div class="telefon-personal">Telèfon personal:<div class="introduir-telf-personal">612345678</div></div>
+            <div class="telefon-familiar">Telèfon d'un familiar:<div class="introduir-telf-fam">612345679</div></div>
         </div>
 
-        <div class="linia-div"></div>
+        <!-- MALALTIA, SÍMPTOMES I SUGGERIMENTS -->
+        <div class="titol">MALALTIA, SÍMPTOMES I SUGGERIMENTS</div>
+        <div class="informacio">
+            <div class="nom-malaltia">Diagnòstic:<div class="introduir-malaltia">Insuficiència respiratòria crònica</div></div>
+            <div class="simptomes">Símptomes:<div class="introduir-simptomes">Fatiga, tos crònica</div></div>
+            <div class="medicaments">Medicaments:<div class="introduir-medicaments">Salbutamol, Tiotropi</div></div>
+            <div class="suggeriments">Suggeriments:<div class="introduir-suggeriments">Evitar esforços físics</div></div>
+        </div>
 
-        <div class="historial">
-            <div class="titol-historial">
-                HISTORIAL MÈDIC
-            </div>
+       <!-- EQUIP MÈDIC -->
+<div class="titol">EQUIP MÈDIC</div>
+<div class="informacio">
+    <div class="metge-responsable">
+        Metge Responsable:<div class="introduir-metge">Dr. Jordi Casas</div>
+    </div>
+    <div class="hospital">
+        Hospital:<div class="introduir-hospital">Hospital Clínic</div>
+    </div>
+    <div class="contacte-equip">
+        Contacte:<div class="introduir-hospital">93 123 45 67</div>
+    </div>
+</div>
 
-            <div class="informacio-historial">
-                Info hist
-            </div>
+        <!-- HISTÒRIC -->
+        <div class="titol">HISTÒRIC</div>
+        <div class="informacio">
+            <div class="historic">Última visita:<div class="introduir-historic">01/12/2023</div></div>
+            <div class="historic">Proves realitzades:<div class="introduir-historic">Radiografia, Espirometria</div></div>
         </div>
     </div>
 </body>
 </html>
+
+<!-- Afegeix el botó Confirmar al final -->
+<div class="boto-confirmar">
+    <a href="segona.html">
+        <button class="btn-confirmar">Confirmar</button>
+    </a>
+</div>
+
